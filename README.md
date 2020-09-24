@@ -64,7 +64,7 @@ If you want to learn Portugues-English you can use my "The 1000 most used words 
 6. run python main.py
 
 ##### Details
-1. There is two data examples to try in ./data
+1. There is a data examples to try in ./data and ./file
 2. Your txt will be save in ./file
 
 ##### Requirements

@@ -7,7 +7,7 @@ def GetDescription(response):
     :return all word translations
     """
     soup = bs4.BeautifulSoup(response.text, 'lxml')
-    return [x.text for x in soup.select('.quick-result-entry')[0].select('.sense-group-results a')]
+    return [x.text for x in soup.select('.quick-results.container')[0].select('.quick-result-entry .quick-result-overview .sense-group-results a')]
 
 
 def GetSamples(response, qt):
@@ -22,8 +22,7 @@ def GetSamples(response, qt):
 
     for example in [
             x.text.split()
-            for x in soup.select('.result-block.container')[0]
-            .select('.sense-group .dict-example .dict-source')][:qt]:
+            for x in soup.select('.result-block.container .sense-group .dict-entry .more-examples .dict-source')]:
         count = 0
         ret = []
         for x in example:

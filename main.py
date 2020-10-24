@@ -1,5 +1,7 @@
 import pandas as pd
 import requests
+import os
+from tqdm import tqdm
 from handle import GetDescription, GetSamples
 
 
@@ -8,6 +10,7 @@ delim = input('What is the delimiter: ')
 file_name = input('What will be the output file name? ')
 samples_amount = int(input('How many samples do you want to get? '))
 
+os.system('cls' if os.name == 'nt' else 'clear')
 
 print('Creating a dict to save the datas...')
 result = {}
@@ -27,10 +30,10 @@ try:
 except:
     print('Error to read file')
 
-
+print('\n')
 try:
     print('starting to search translations...')
-    for word in words:
+    for word in tqdm(words):
         print(f'Getting description and samples about: "{word}"')
         print(f'Getting description to "{word}"...')
         desc = GetDescription(word)
@@ -50,7 +53,7 @@ except:
 try:
     print(f'Creating {file_name} file...')
     f = open(f"./file/{file_name}.txt", "w+", encoding="utf-8")
-    for key, value in result.items():
+    for key, value in tqdm(result.items()):
         print(f'Creating line to "{key}"')
 
         line = f"{key};"

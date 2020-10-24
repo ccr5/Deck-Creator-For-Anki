@@ -1,13 +1,21 @@
 import bs4
+from googletrans import Translator
+
+transl = Translator(
+    service_urls=[
+        'translate.google.com',
+        'translate.google.com.br'
+    ]
+)
 
 
-def GetDescription(response):
+def GetDescription(word):
     """
     :param response Response
     :return all word translations
     """
-    soup = bs4.BeautifulSoup(response.text, 'lxml')
-    return [x.text for x in soup.select('.quick-results.container')[0].select('.quick-result-entry .quick-result-overview .sense-group-results a')]
+    ret = transl.translate(word, src='en', dest='pt')
+    return ret.text
 
 
 def GetSamples(response, qt):
@@ -22,7 +30,7 @@ def GetSamples(response, qt):
 
     for example in [
             x.text.split()
-            for x in soup.select('.result-block.container .sense-group .dict-entry .more-examples .dict-source')]:
+            for x in soup.select('.result-block.container .sense-group .dict-entry .more-examples .dict-source')[:qt]]:
         count = 0
         ret = []
         for x in example:

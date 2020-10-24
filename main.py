@@ -32,10 +32,10 @@ try:
     print('starting to search translations...')
     for word in words:
         print(f'Getting description and samples about: "{word}"')
+        print(f'Getting description to "{word}"...')
+        desc = GetDescription(word)
         res = requests.get(
             f'https://pt.bab.la/dicionario/ingles-portugues/{word}')
-        print(f'Getting description to "{word}"...')
-        desc = GetDescription(res)
         print(f'Getting samples to "{word}"...')
         examples = GetSamples(res, samples_amount)
         print(f'Save "{word}" on dict')
@@ -54,7 +54,7 @@ try:
         print(f'Creating line to "{key}"')
 
         line = f"{key};"
-        line += ", ".join(value[0])
+        line += value[0]
         line += ";"
         for x in value[1]:
             line += " ".join(x)

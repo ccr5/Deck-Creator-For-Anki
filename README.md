@@ -7,7 +7,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/ccr5/Deck-Creator-For-Anki">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -16,12 +16,12 @@
   <p align="center">
     A way to create your Anki decs
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ccr5/Deck-Creator-For-Anki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/ccr5/Deck-Creator-For-Anki/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/ccr5/Deck-Creator-For-Anki/issues">Request Feature</a>
   </p>
 </p>
 
@@ -56,8 +56,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/ccr5/Deck-Creator-For-Anki)
-
 Do you want to study a language? have you a word list to improve your vocabulary? You can use this project to create a Deck into Ankiweb to achieve your goals! Passing a csv file with two columns: 
 
 1. Word -> the word you want to learn
@@ -81,11 +79,27 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 1. Clone this repository
+```sh
+git clone "https://github.com/ccr5/Deck-Creator-For-Anki.git"
+```
 2. Open the terminal
-3. run virtualenv env
+3. create a virtual environment 
+```sh
+virtualenv venv
+```
 4. exec env
-5. run pip install -r requirements.txt
-6. run python main.py
+**Linux**
+```sh
+source venv/bin/activate
+```
+5. install all dependencies
+```sh
+pip install -r requirements.txt
+```
+6. run main.py
+```sh
+python main.py
+```
 
 ## Usage
 
@@ -109,7 +123,7 @@ money;moeda, grana, dinheiro;It deals with money, in other words - and people kn
 
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ccr5/Deck-Creator-For-Anki/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -127,22 +141,22 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Matheus Nobre Gomes - matt-gomes@live.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ccr5/Deck-Creator-For-Anki](https://github.com/ccr5/Deck-Creator-For-Anki)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ccr5/Deck-Creator-For-Anki.svg?style=for-the-badge
+[contributors-url]: https://github.com/ccr5/Deck-Creator-For-Anki/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ccr5/Deck-Creator-For-Anki.svg?style=for-the-badge
+[forks-url]: https://github.com/ccr5/Deck-Creator-For-Anki/network/members
+[stars-shield]: https://img.shields.io/github/stars/ccr5/Deck-Creator-For-Anki.svg?style=for-the-badge
+[stars-url]: https://github.com/ccr5/Deck-Creator-For-Anki/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ccr5/Deck-Creator-For-Anki.svg?style=for-the-badge
+[issues-url]: https://github.com/ccr5/Deck-Creator-For-Anki/issues
+[license-shield]: https://img.shields.io/github/license/ccr5/Deck-Creator-For-Anki.svg?style=for-the-badge
+[license-url]: https://github.com/ccr5/Deck-Creator-For-Anki/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://linkedin.com/in/mattnobre
 [product-screenshot]: images/screenshot.png
